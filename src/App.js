@@ -1,19 +1,11 @@
 import { useEffect, useState } from "react";
-import { faker } from "@faker-js/faker";
 
 import Header from "./header";
-import Main from "./main";
-import Archive from "./archive";
+import { Main } from "./main";
+import { Archive } from "./archive";
 import Footer from "./footer";
 
 import { PostProvider } from "./context";
-
-function createRandomPost() {
-  return {
-    title: `${faker.hacker.adjective()} ${faker.hacker.noun()}`,
-    body: faker.hacker.phrase(),
-  };
-}
 
 function App() {
   const [isFakeDark, setIsFakeDark] = useState(false);
